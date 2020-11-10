@@ -9,6 +9,7 @@ public class TicTacToe
   createBoard();
   chooseLetter();
   showBoard();
+  desiredMove();
  }
 //uc1
  public static void createBoard()
@@ -44,6 +45,27 @@ public class TicTacToe
   System.out.println("/----|-----|----\\");
   System.out.println(" | " + board[7] + " | " + board[8] + " | " + board[9] + " | ");
   System.out.println("/------|----|---\\");
+ }
+ public static void desiredMove()
+ {
+  System.out.println("Enter your position value");
+  int position=Scanner.nextInt();
+  if(position >= 1 && position < 10)
+  {
+   if(board[position] == ' ')
+   {
+    System.out.println("space is available");
+    showBoard();
+   }
+   else
+   {
+    System.out.println("no space available");
+   }
+  }
+  else
+  {
+   System.out.println("key value is invalid");
+  }
  }
 }
 
